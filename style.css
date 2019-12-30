@@ -1,0 +1,41 @@
+.yinyang {
+    position: relative;
+    width: 100px;
+    height: 200px;
+    border-style: solid;
+    border-width: 2px 100px 2px 2px;
+    border-radius: 50%;
+    animation: roll 10s linear infinite;
+}
+
+.yinyang:before {
+    content: "";
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    top: 0;
+    left: 50%;
+    background-color: #fff;
+}
+
+.yinyang:after {
+    content: "";
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    bottom: 0;
+    left: 50%;
+    background-color: #000;
+}
+
+@keyframes roll {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
